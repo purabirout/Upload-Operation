@@ -1,0 +1,16 @@
+create database college;
+
+use college;
+
+create table studentinfo(student_Id int primary key,student_Name varchar(10),student_Address varchar(20));
+
+desc studentinfo;
+
+load data infile "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/UploadData.csv"
+into table studentinfo
+fields terminated by ','
+enclosed by ""
+lines terminated by '\n'
+ignore 1 rows;
+
+select * from studentinfo;
